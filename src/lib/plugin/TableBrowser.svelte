@@ -11,14 +11,14 @@
 	const cols =
 		data.db
 			.find(({ name }) => name === table)
-			?.columns.sort(({ cid: a }, { cid: b }) => a - b)
+			?.columns.sort(({ cid: b }, { cid: a }) => a - b)
 			.map(({ name }) => name) || [];
 
 	let locked = true;
 	let offset = 0;
 	let limit = 200;
 	let order = "";
-	let dir: "ASC" | "DESC" = "DESC";
+	let dir: "ASC" | "DESC" = "ASC";
 	let select = "*";
 
 	let running = false;
