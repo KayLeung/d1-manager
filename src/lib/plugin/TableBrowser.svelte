@@ -18,7 +18,7 @@
 	let offset = 0;
 	let limit = 200;
 	let order = "";
-	let dir: "ASC" | "DESC" = "ASC";
+	let dir: "ASC" | "DESC" = "DESC";
 	let select = "*";
 
 	let running = false;
