@@ -11,7 +11,7 @@
 	const cols =
 		data.db
 			.find(({ name }) => name === table)
-			?.columns.sort(({ cid: b }, { cid: a }) => a - b)
+			?.columns.sort(({ cid: a }, { cid: b }) => a - b)
 			.map(({ name }) => name) || [];
 
 	let locked = true;
